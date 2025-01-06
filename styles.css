@@ -1,0 +1,125 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo Global */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Header */
+header {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;                  
+    background-color: #ffffff; 
+    color: rgb(0, 0, 0);                
+    padding: 150px;
+}
+
+header h1 {
+    font-size: 3em;             
+    margin-bottom: 50px;        
+    color: #000000;          
+}
+
+header h2 {
+    font-size: 1.8em;          
+    color: #000000;          
+    font-style: italic;        
+}
+
+section h3 {
+    text-align: center;
+    padding-bottom: 60px;
+    font-size: 3.0em;
+}
+
+section p {
+    text-align: center;
+    padding-bottom: 45px;
+    font-size: 1.2em;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+  
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+  
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 5px 35px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+}
+
+/* Grid de Cartas */
+.baralho {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 45px;
+    padding: 20px;
+    justify-items: center; 
+}
+
+.baralho img {
+    width: 100%;
+    max-width: 200px; 
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); 
+    transition: transform 0.3s ease; 
+}
+
+.baralho img:hover {
+    transform: scale(1.10);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #000;
+    background-color: #f4f4f4; /* Adiciona contraste */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .baralho {
+        grid-template-columns: repeat(3, 1fr); /* Reduz colunas */
+    }
+}
+
+@media (max-width: 480px) {
+    .baralho {
+        grid-template-columns: repeat(2, 1fr); /* Para telas bem pequenas */
+    }
+
+    .navbar ul li a {
+        font-size: 1em; /* Ajusta o tamanho do texto */
+        padding: 5px 20px;
+    }
+}
+
